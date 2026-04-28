@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dr. Parul's Dental & Implant Center - Premium Dental Care</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6}.gradient-bg{background:linear-gradient(135deg,#3b82f6 0%,#8b5cf6 50%,#ec4899 100%)}.glass-effect{backdrop-filter:blur(15px);background:rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,0.2)}.hidden{display:none}.fade-in{animation:fadeIn 1s ease-in-out}.slide-up{animation:slideUp 0.8s cubic-bezier(0.25,0.46,0.45,0.94)}@keyframes fadeIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}.service-card:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 30px 60px rgba(0,0,0,0.2)}.glow-effect{box-shadow:0 0 30px rgba(59,130,246,0.4)}.nav-link-active{color:#3b82f6 !important;font-weight:700}
+</style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 min-h-screen">
+<!-- Pre Entry Lead Capture Modal -->
+<div id="preEntryModal" class="fixed inset-0 bg-black/75 flex items-center justify-center p-6 z-50 fade-in">
+  <div class="bg-white/95 backdrop-blur-2xl rounded-3xl p-10 w-full max-w-lg shadow-3xl glass-effect max-h-[90vh] overflow-y-auto">
+    <div class="text-center mb-10">
+      <div class="w-24 h-24 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+        <i class="fas fa-sparkles text-4xl text-white"></i>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">Welcome to</h1>
+      <h2 class="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Dr. Parul's Dental & Implant Center</h2>
+      <p class="text-xl text-gray-600 mt-2 font-semibold">Premium Dental Excellence</p>
+    </div>
+    <form id="leadCaptureForm" class="space-y-6">
+      <div>
+        <input id="fullName" required placeholder="Full Name *" class="w-full border-2 border-gray-200/50 bg-white/80 p-5 rounded-3xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100/50 transition-all duration-500 text-xl backdrop-blur-sm shadow-lg">
+      </div>
+      <div class="relative">
+        <span class="absolute left-5 top-5 text-xl font-black text-emerald-600 bg-white/90 px-2 rounded-xl shadow-sm">🇮🇳 +91</span>
+        <input type="tel" id="phoneNumber" maxlength="10" required placeholder="9876543210 *" class="w-full border-2 border-gray-200/50 bg-white/80 p-5 pl-20 rounded-3xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100/50 transition-all duration-500 text-xl backdrop-blur-sm shadow-lg">
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <input id="age" type="number" min="16" max="100" required placeholder="Age *" class="border-2 border-gray-200/50 bg-white/80 p-5 rounded-3xl focus:border-purple-500 focus:ring-4 focus:ring-purple-100/50 transition-all duration-500 shadow-lg">
+        <input id="email" type="email" required placeholder="Email *" class="border-2 border-gray-200/50 bg-white/80 p-5 rounded-3xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100/50 transition-all duration-500 shadow-lg">
+      </div>
+      <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 text-white p-6 rounded-3xl font-black text-xl shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-500 glow-effect">
+        <i class="fas fa-rocket mr-3"></i>Enter Dr. Parul's Center
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Main Website -->
+<div id="mainSite" class="hidden">
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur-xl sticky top-0 z-50 shadow-2xl border-b border-white/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center py-5">
+        <div class="flex items-center space-x-4">
+          <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-xl">
+            <i class="fas fa-tooth text-2xl text-white"></i>
+          </div>
+          <div>
+            <span class="text-2xl lg:text-3xl font-black bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">Dr. Parul's</span>
+            <p class="text-xs lg:text-sm text-gray-600 font-semibold">Dental & Implant Center</p>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center space-x-10">
+          <a href="#home" class="nav-link text-gray-700 hover:text-emerald-600 font-semibold text-lg transition-all duration-300 px-3 py-2 rounded-xl hover:bg-emerald-50">Home</a>
+          <a href="#about" class="nav-link text-gray-700 hover:text-emerald-600 font-semibold text-lg transition-all duration-300 px-3 py-2 rounded-xl hover:bg-emerald-50">About</a>
+          <a href="#services" class="nav-link text-gray-700 hover:text-emerald-600 font-semibold text-lg transition-all duration-300 px-3 py-2 rounded-xl hover:bg-emerald-50">Services</a>
+          <a href="#reviews" class="nav-link text-gray-700 hover:text-emerald-600 font-semibold text-lg transition-all duration-300 px-3 py-2 rounded-xl hover:bg-emerald-50">Reviews</a>
+          <a href="#location" class="nav-link text-gray-700 hover:text-emerald-600 font-semibold text-lg transition-all duration-300 px-3 py-2 rounded-xl hover:bg-emerald-50">Location</a>
+        </div>
+        <button onclick="openBookingModal()" class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 glow-effect flex items-center">
+          <i class="fas fa-calendar-check mr-2"></i>Book Now
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="gradient-bg text-white py-32 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
+      <div class="slide-up">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-8 py-4 rounded-3xl mb-8">
+          <p class="text-2xl font-semibold">🏆 15+ Years of Dental Excellence</p>
+        </div>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none">
+          Transform Your
+          <span class="block text-5xl md:text-7xl lg:text-8xl bg-gradient-to-r from-emerald-300 to-white bg-clip-text text-transparent">Smile Today ✨</span>
+        </h1>
+        <p class="text-2xl md:text-3xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-95">Dr. Parul & Expert Team - Advanced Dental Implants & Cosmetic Dentistry</p>
+        <div class="flex flex-col lg:flex-row gap-6 justify-center items-center">
+          <button onclick="openBookingModal()" class="bg-white text-emerald-700 px-12 py-6 rounded-3xl font-black text-xl shadow-3xl hover:shadow-4xl hover:-translate-y-3 transition-all duration-500 glow-effect">
+            <i class="fas fa-calendar-plus mr-3"></i>Book Free Consultation
+          </button>
+          <a href="#location" class="border-3 border-white/50 text-white px-12 py-6 rounded-3xl font-black text-xl hover:bg-white/20 hover:border-white transition-all duration-500 backdrop-blur-sm">📍 Find Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-32 bg-white/80 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-7xl font-black bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent mb-6">Meet Dr. Parul</h2>
+        <p class="text-2xl text-gray-600 max-w-4xl mx-auto font-semibold">15+ Years | Implant Specialist | 12,000+ Transformed Smiles</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="slide-up">
+          <h3 class="text-4xl font-black text-gray-900 mb-8">Your Smile Transformation Partner</h3>
+          <p class="text-xl text-gray-600 mb-10 leading-relaxed">Dr. Parul's Dental & Implant Center combines cutting-edge technology with personalized care to deliver exceptional results that last a lifetime.</p>
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="group">
+              <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                <i class="fas fa-medal text-2xl text-white"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-gray-900 mb-2">15+ Years</h4>
+              <p class="text-emerald-600 font-semibold">Expertise</p>
+            </div>
+            <div class="group">
+              <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                <i class="fas fa-users text-2xl text-white"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-gray-900 mb-2">12K+</h4>
+              <p class="text-blue-600 font-semibold">Happy Patients</p>
+            </div>
+            <div class="group">
+              <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                <i class="fas fa-star text-2xl text-white"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-gray-900 mb-2">4.95★</h4>
+              <p class="text-yellow-600 font-semibold">Google Rating</p>
+            </div>
+            <div class="group">
+              <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                <i class="fas fa-crown text-2xl text-white"></i>
+              </div>
+              <h4 class="text-2xl font-bold text-gray-900 mb-2">Lifetime</h4>
+              <p class="text-purple-600 font-semibold">Warranty</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative slide-up">
+          <div class="bg-gradient-to-br from-emerald-500 via-teal-500 to-blue-500 p-2 rounded-4xl shadow-3xl">
+            <div class="bg-white/90 backdrop-blur-xl rounded-4xl p-12 text-center border border-white/50">
+              <div class="w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-8 flex items-center justify-center shadow-2xl">
+                <i class="fas fa-user-md text-6xl text-white"></i>
+              </div>
+              <h4 class="text-4xl font-black text-gray-900 mb-4">Dr. Parul</h4>
+              <p class="text-2xl bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-bold">BDS, MDS - Implant Specialist</p>
+              <p class="text-lg text-gray-600 mt-2">Advanced Implantology & Cosmetics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-32 bg-gradient-to-br from-white via-blue-50/50 to-emerald-50/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-24">
+        <h2 class="text-5xl md:text-7xl font-black bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 bg-clip-text text-transparent mb-6">Premium Services</h2>
+        <p class="text-2xl text-gray-600 max-w-4xl mx-auto font-semibold">World-Class Dental Solutions | Advanced Technology | Lifetime Support</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="service-card bg-white/80 backdrop-blur-sm rounded-4xl p-10 shadow-2xl hover:shadow-4xl transition-all duration-700 border border-white/50 glass-effect">
+          <div class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-2xl">
+            <i class="fas fa-tooth text-3xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-black mb-6 text-gray-900 text-center">Deep Cleaning</h3>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed text-lg">Advanced ultrasonic cleaning for plaque-free, healthy gums & fresh breath</p>
+          <div class="bg-emerald-100/50 border-2 border-emerald-200 text-emerald-800 px-6 py-4 rounded-3xl font-bold text-2xl text-center backdrop-blur-sm">₹1800</div>
+        </div>
+        <div class="service-card bg-white/80 backdrop-blur-sm rounded-4xl p-10 shadow-2xl hover:shadow-4xl transition-all duration-700 border border-white/50 glass-effect">
+          <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-2xl">
+            <i class="fas fa-magic text-3xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-black mb-6 text-gray-900 text-center">Laser Whitening</h3>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed text-lg">Hollywood smile in 45 mins with advanced laser technology</p>
+          <div class="bg-purple-100/50 border-2 border-purple-200 text-purple-800 px-6 py-4 rounded-3xl font-bold text-2xl text-center backdrop-blur-sm">₹6500</div>
+        </div>
+        <div class="service-card bg-white/80 backdrop-blur-sm rounded-4xl p-10 shadow-2xl hover:shadow-4xl transition-all duration-700 border border-white/50 glass-effect">
+          <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-2xl">
+            <i class="fas fa-stethoscope text-3xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-black mb-6 text-gray-900 text-center">Consultation</h3>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed text-lg">Complete digital scan & personalized treatment roadmap</p>
+          <div class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-4 rounded-3xl font-bold text-2xl text-center shadow-2xl">FREE</div>
+        </div>
+        <div class="service-card bg-white/80 backdrop-blur-sm rounded-4xl p-10 shadow-2xl hover:shadow-4xl transition-all duration-700 border border-white/50 glass-effect">
+          <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-2xl">
+            <i class="fas fa-syringe text-3xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-black mb-6 text-gray-900 text-center">Root Canal</h3>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed text-lg">Painless rotary treatment with 99% success rate</p>
+          <div class="bg-orange-100/50 border-2 border-orange-200 text-orange-800 px-6 py-4 rounded-3xl font-bold text-2xl text-center backdrop-blur-sm">₹4500</div>
+        </div>
+        <div class="service-card bg-white/80 backdrop-blur-sm rounded-4xl p-10 shadow-2xl hover:shadow-4xl transition-all duration-700 border border-white/50 glass-effect">
+          <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-2xl">
+            <i class="fas fa-crown text-3xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-black mb-6 text-gray-900 text-center">Zirconia Crowns</h3>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed text-lg">Natural-looking, metal-free crowns with 15-year warranty</p>
+          <div class="bg-yellow-100/50 border-2 border-yellow-200 text-yellow-800 px-6 py-4 rounded-3xl font-bold text-2xl text-center backdrop-blur-sm">₹7500</div>
+        </div>
+        <div class="service-card bg-white/80 backdrop-blur-sm rounded-4xl p-10 shadow-2xl hover:shadow-4xl transition-all duration-700 border border-white/50 glass-effect lg:col-span-2 lg:col-start-2">
+          <div class="w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-2xl">
+            <i class="fas fa-prosthesis text-3xl text-white"></i>
+          </div>
+          <h3 class="text-3xl font-black mb-6 text-gray-900 text-center">Dental Implants</h3>
+          <p class="text-gray-600 mb-8 text-center leading-relaxed text-lg">Premium implants with lifetime warranty & 98% success rate</p>
+          <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-4 rounded-3xl font-bold text-2xl text-center shadow-2xl mx-auto w-fit">₹28,000</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-32 bg-white/80 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-24">
+        <h2 class="text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-emerald-600 bg-clip-text text-transparent mb-6">Patient Love</h2>
+        <div class="flex items-center justify-center space-x-1 text-4xl mb-6">
+          <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+        </div>
+        <p class="text-2xl text-gray-600 font-semibold">4.95★ Rating (800+ Google Reviews)</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white/60 backdrop-blur-sm rounded-4xl p-10 hover:shadow-3xl hover:-translate-y-4 transition-all duration-500 border border-white/50 glass-effect">
+          <div class="flex mb-6">
+            <div class="flex text-yellow-400 text-2xl mr-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-xl text-gray-800 mb-8 leading-relaxed">"Dr. Parul changed my life with perfect implants! Zero pain, amazing results."</p>
+          <div class="flex items-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-6 shadow-xl">AS</div>
+            <div>
+              <p class="font-black text-2xl">Amit Singh</p>
+              <p class="text-lg text-emerald-600 font-semibold">1 week ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/60 backdrop-blur-sm rounded-4xl p-10 hover:shadow-3xl hover:-translate-y-4 transition-all duration-500 border border-white/50 glass-effect">
+          <div class="flex mb-6">
+            <div class="flex text-yellow-400 text-2xl mr-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-xl text-gray-800 mb-8 leading-relaxed">"My whitening results are incredible! Best clinic in the city."</p>
+          <div class="flex items-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-6 shadow-xl">SN</div>
+            <div>
+              <p class="font-black text-2xl">Sneha Nair</p>
+              <p class="text-lg text-purple-600 font-semibold">2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/60 backdrop-blur-sm rounded-4xl p-10 hover:shadow-3xl hover:-translate-y-4 transition-all duration-500 border border-white/50 glass-effect">
+          <div class="flex mb-6">
+            <div class="flex text-yellow-400 text-2xl mr-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-xl text-gray-800 mb-8 leading-relaxed">"Painless root canal in one visit. Dr. Parul is a genius!"</p>
+          <div class="flex items-center">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-6 shadow-xl">RK</div>
+            <div>
+              <p class="font-black text-2xl">Rahul Khan</p>
+              <p class="text-lg text-blue-600 font-semibold">3 days ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-32 bg-gradient-to-br from-emerald-50 via-white to-purple-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-24">
+        <h2 class="text-5xl md:text-7xl font-black bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">Our State-of-the-Art Clinic</h2>
+        <p class="text-2xl text-gray-600 font-semibold">World-Class Facility for Ultimate Comfort</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-cover bg-center h-72 md:h-96 rounded-4xl shadow-3xl hover:scale-105 transition-all duration-500 group" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1576091160399-1d65c2792e1b?w=800')"></div>
+        <div class="bg-cover bg-center h-80 md:h-96 lg:h-[500px] rounded-4xl shadow-3xl hover:scale-105 transition-all duration-500 row-span-2 group" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800')"></div>
+        <div class="bg-cover bg-center h-72 md:h-80 rounded-4xl shadow-3xl hover:scale-105 transition-all duration-500 group" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1566334635541-6e85f8f1e7d9?w=800')"></div>
+        <div class="bg-cover bg-center h-40 md:h-72 rounded-4xl shadow-3xl hover:scale-105 transition-all duration-500 group" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800')"></div>
+        <div class="bg-cover bg-center h-40 md:h-72 rounded-4xl shadow-3xl hover:scale-105 transition-all duration-500 col-span-2 md:col-span-1 group" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800')"></div>
+        <div class="bg-cover bg-center h-72 md:h-96 rounded-4xl shadow-3xl hover:scale-105 transition-all duration-500 group" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1585555297578-34cd9c4b4a47?w=800')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="py-32 bg-white/80 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="slide-up">
+          <h2 class="text-5xl md:text-7xl font-black bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent mb-12">Visit Us Today</h2>
+          <div class="space-y-8 mb-12">
+            <div class="flex items-start space-x-6 p-8 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-4xl backdrop-blur-sm border border-emerald-200/50">
+              <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-3xl flex items-center justify-center text-2xl text-white font-bold shadow-2xl flex-shrink-0 mt-1">
+                📍
+              </div>
+              <div>
+                <h4 class="text-3xl font-black text-gray-900 mb-3">Dr. Parul's Dental & Implant Center</h4>
+                <p class="text-2xl text-gray-600 font-semibold">23.2757736, 77.3677564</p>
+              </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="flex items-center p-6 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-3xl backdrop-blur-sm border border-emerald-200/50">
+                <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center text-2xl text-white font-bold mr-6 shadow-xl">
+                  📞
+                </div>
+                <span class="text-2xl font-black text-gray-900">+91 88888 88888</span>
+              </div>
+              <div class="flex items-center p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl backdrop-blur-sm border border-blue-200/50">
+                <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-2xl text-white font-bold mr-6 shadow-xl">
+                  🕒
+                </div>
+                <span class="text-2xl font-black text-gray-900">Mon-Sat: 9AM - 10PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <a href="https://wa.me/918888888888" target="_blank" class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-8 rounded-4xl text-center font-black text-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-500 shadow-2xl flex items-center justify-center">
+              <i class="fab fa-whatsapp text-3xl mr-4"></i>WhatsApp Now
+            </a>
+            <a href="https://www.google.com/maps/place/Dr.+Parul's+Dental+%26+Implant+Center/@20.5509044,72.5423074,6.71z/data=!4m10!1m3!11m2!2sZyJ0MtsMS7KOAxUCf6NJeQ!3e3!3m5!1s0x397c67d0a6a4739f:0x26cbc481c7454e1f!8m2!3d23.2757736!4d77.3677564!16s%2Fg%2F11g24txsmj?entry=ttu" target="_blank" class="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8 rounded-4xl text-center font-black text-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-500 shadow-2xl flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-3xl mr-4"></i>Get Directions
+            </a>
+          </div>
+        </div>
+        <div class="relative h-[500px] rounded-4xl shadow-4xl overflow-hidden slide-up border-4 border-white/50">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.039140394614!2d77.3677564!3d23.2757736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c67d0a6a4739f%3A0x26cbc481c7454e1f!2sDr.%20Parul%27s%20Dental%20%26%20Implant%20Center!5e0!3m2!1sen!2sin!4v1734567890123!5m2!1sen!2sin" 
+            width="100%" height="100%" style="border:0; border-radius:24px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-40 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+    <div class="max-w-5xl mx-auto text-center px-6 lg:px-8 relative z-10">
+      <div class="w-24 h-24 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-12 backdrop-blur-xl shadow-2xl">
+        <i class="fas fa-heart text-4xl text-white"></i>
+      </div>
+      <h2 class="text-6xl md:text-8xl font-black mb-8 leading-tight">Ready for Your Dream Smile?</h2>
+      <p class="text-3xl mb-16 text-white/90 font-semibold max-w-3xl mx-auto leading-relaxed">Join thousands of happy patients who trusted Dr. Parul for their perfect smile</p>
+      <button onclick="openBookingModal()" class="bg-white text-emerald-700 px-16 py-8 rounded-4xl font-black text-2xl shadow-4xl hover:shadow-5xl hover:-translate-y-4 transition-all duration-700 glow-effect">
+        <i class="fas fa-sparkles mr-4"></i>Book Your Transformation Now
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div>
+          <div class="flex items-center space-x-4 mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl flex items-center justify-center shadow-2xl">
+              <i class="fas fa-tooth text-2xl text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-3xl font-black bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Dr. Parul's</h3>
+              <p class="text-emerald-400 font-bold">Dental & Implant Center</p>
+            </div>
+          </div>
+          <p class="text-gray-400 text-lg leading-relaxed">Transforming smiles with precision implants and cosmetic excellence.</p>
+        </div>
+        <div>
+          <h4 class="text-2xl font-black mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Quick Links</h4>
+          <ul class="space-y-4 text-gray-400">
+            <li><a href="#home" class="hover:text-emerald-400 font-semibold text-lg transition-colors block py-2">Home</a></li>
+            <li><a href="#about" class="hover:text-emerald-400 font-semibold text-lg transition-colors block py-2">About Dr. Parul</a></li>
+            <li><a href="#services" class="hover:text-emerald-400 font-semibold text-lg transition-colors block py-2">Our Services</a></li>
+            <li><a href="#location" class="hover:text-emerald-400 font-semibold text-lg transition-colors block py-2">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-2xl font-black mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Key Services</h4>
+          <ul class="space-y-4 text-gray-400">
+            <li class="flex items-center"><i class="fas fa-check text-emerald-400 mr-3"></i>Cleaning & Whitening</li>
+            <li class="flex items-center"><i class="fas fa-check text-emerald-400 mr-3"></i>Root Canal Therapy</li>
+            <li class="flex items-center"><i class="fas fa-check text-emerald-400 mr-3"></i>Dental Implants</li>
+            <li class="flex items-center"><i class="fas fa-check text-emerald-400 mr-3"></i>Zirconia Crowns</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-2xl font-black mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Get in Touch</h4>
+          <div class="space-y-4 text-gray-400">
+            <p class="flex items-center text-lg"><i class="fas fa-phone mr-4 text-emerald-400"></i>+91 88888 88888</p>
+            <p class="flex items-center text-lg"><i class="fas fa-envelope mr-4 text-emerald-400"></i>info@drparuldental.com</p>
+            <p class="flex items-center text-lg"><i class="fas fa-map-marker-alt mr-4 text-emerald-400"></i>Bhopal, MP (23.2757736, 77.3677564)</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-12 text-center text-gray-400">
+        <p class="text-xl font-semibold">&copy; 2025 Dr. Parul's Dental & Implant Center. All rights reserved. | Designed for Perfect Smiles ✨</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center p-6 z-50 fade-in">
+  <div class="bg-white/95 backdrop-blur-3xl rounded-4xl p-12 w-full max-w-2xl shadow-4xl glass-effect max-h-[90vh] overflow-y-auto">
+    <div class="text-center mb-10">
+      <div class="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+        <i class="fas fa-calendar-check text-3xl text-white"></i>
+      </div>
+      <h3 class="text-4xl font-black bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent mb-2">Book Appointment</h3>
+      <p class="text-xl text-gray-600 font-semibold">Complete your booking in 30 seconds</p>
+    </div>
+    
+    <div id="leadInfo" class="bg-gradient-to-r from-emerald-50 to-teal-50 p-8 rounded-4xl mb-10 border border-emerald-200/50 backdrop-blur-sm text-sm lg:text-base"></div>
+    
+    <div class="space-y-6">
+      <select id="serviceSelect" class="w-full border-2 border-gray-200/50 bg-white/80 p-6 rounded-4xl text-xl focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100/50 transition-all duration-500 backdrop-blur-sm shadow-xl font-semibold">
+        <option value="Consultation">🩺 General Consultation (FREE)</option>
+        <option value="Cleaning">🪥 Professional Cleaning - ₹1800</option>
+        <option value="Whitening">✨ Laser Teeth Whitening - ₹6500</option>
+        <option value="Root Canal">🦷 Root Canal Treatment - ₹4500</option>
+        <option value="Crown">👑 Zirconia Crown - ₹7500</option>
+        <option value="Implant">🦴 Premium Dental Implant - ₹28,000</option>
+      </select>
+      <input id="datetimePicker" placeholder="🎯 Preferred Date & Time (15 Dec 2025, 3:00 PM)" class="w-full border-2 border-gray-200/50 bg-white/80 p-6 rounded-4xl text-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-100/50 transition-all duration-500 backdrop-blur-sm shadow-xl">
+    </div>
+    
+    <div class="flex flex-col md:flex-row gap-6 pt-8 border-t border-gray-200/50">
+      <button onclick="closeBookingModal()" class="flex-1 border-2 border-gray-300/50 p-6 rounded-4xl font-bold text-xl hover:bg-gray-50/50 backdrop-blur-sm transition-all duration-500 shadow-xl hover:shadow-2xl">
+        <i class="fas fa-times mr-3"></i>Cancel
+      </button>
+      <button id="confirmBooking" class="flex-1 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 text-white p-6 rounded-4xl font-black text-xl hover:shadow-4xl hover:-translate-y-2 transition-all duration-500 shadow-3xl glow-effect">
+        <i class="fab fa-whatsapp mr-3 text-2xl"></i>Send to WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+const phoneInput = document.getElementById('phoneNumber');
+phoneInput.addEventListener('input', e => {
+  let value = e.target.value.replace(/\D/g, '').slice(0, 10);
+  e.target.value = value;
+});
+phoneInput.addEventListener('keypress', e => {
+  if (!/[0-9]/.test(e.key)) e.preventDefault();
+});
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Lead capture form
+document.getElementById('leadCaptureForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const fullName = document.getElementById('fullName');
+  const phoneNumber = document.getElementById('phoneNumber');
+  const age = document.getElementById('age');
+  const email = document.getElementById('email');
+  
+  const data = {
+    name: fullName.value,
+    phone: '+91' + phoneNumber.value,
+    age: age.value,
+    email: email.value,
+    timestamp: new Date().toISOString()
+  };
+  
+  localStorage.setItem('parulDentalLead', JSON.stringify(data));
+  
+  document.getElementById('preEntryModal').classList.add('hidden');
+  document.getElementById('mainSite').classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Booking modal functions
+function openBookingModal() {
+  const lead = JSON.parse(localStorage.getItem('parulDentalLead') || '{}');
+  const leadInfo = document.getElementById('leadInfo');
+  leadInfo.innerHTML = `
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+      <div class="space-y-3">
+        <p><strong class="text-gray-900">👤 Name:</strong> <span class="font-bold text-2xl text-emerald-700">${lead.name || ''}</span></p>
+        <p><strong class="text-gray-900">📱 Phone:</strong> <span class="font-bold text-2xl text-blue-600">${lead.phone || ''}</span></p>
+      </div>
+      <div class="space-y-3">
+        <p><strong class="text-gray-900">🎂 Age:</strong> <span class="font-bold text-2xl text-purple-600">${lead.age || ''}</span> years</p>
+        <p><strong class="text-gray-900">✉️ Email:</strong> <span class="font-bold text-xl text-gray-700">${lead.email || ''}</span></p>
+      </div>
+    </div>
+  `;
+  document.getElementById('bookingModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBookingModal() {
+  document.getElementById('bookingModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+document.getElementById('confirmBooking').onclick = function() {
+  const lead = JSON.parse(localStorage.getItem('parulDentalLead') || '{}');
+  const serviceSelect = document.getElementById('serviceSelect');
+  const datetimePicker = document.getElementById('datetimePicker');
+  
+  const message = encodeURIComponent(`
+🦷 *Dr. Parul's Dental - New Appointment Request* 🦷
+
+👤 *Patient Information:*
+- Name: ${lead.name || 'N/A'}
+- Phone: ${lead.phone || 'N/A'}
+- Age: ${lead.age || 'N/A'} years
+- Email: ${lead.email || 'N/A'}
+
+🎯 *Booking Details:*
+- Service: ${serviceSelect.value}
+- Preferred Time: ${datetimePicker.value || 'Flexible'}
+
+⏰ Please share available slots!
+🙏 Thank you for choosing Dr. Parul's Center
+✨ Lifetime Smile Guarantee
+  `);
+  
+  window.open(`https://wa.me/918888888888?text=${message}`, '_blank');
+  closeBookingModal();
+};
+
+// Enhanced nav highlighting
+window.addEventListener('scroll', () => {
+  let current = '';
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= (sectionTop - 300)) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('nav-link-active', 'text-emerald-600', 'bg-emerald-50');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('nav-link-active', 'text-emerald-600', 'bg-emerald-50');
+    }
+  });
+});
+
+// Close modal on outside click
+document.getElementById('bookingModal').addEventListener('click', function(e) {
+  if (e.target === this) closeBookingModal();
+});
+
+// Preload animations
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
+</script>
+</body>
+</html>
